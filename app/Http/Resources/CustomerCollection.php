@@ -17,6 +17,7 @@ class CustomerCollection extends ResourceCollection
         return [
             'data' => $this->collection->transform(function ($customer){
                 return [
+                    //prepare all data for rest api
                     'id' => $customer->id,
                     'name' => $customer->name,
                     'email' => $customer->email,

@@ -18,4 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+//for single action controller route
 Route::get('/customers', 'CustomerController')->name('customers');

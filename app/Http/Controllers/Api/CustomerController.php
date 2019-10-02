@@ -17,6 +17,7 @@ class CustomerController extends Controller
      */
     public function index()
     {
+        //use eloquent api resource collection for passing data
         return new CustomerCollection(Customer::orderBy('id', 'desc')->paginate(10));
        // return Customer::all();
     }

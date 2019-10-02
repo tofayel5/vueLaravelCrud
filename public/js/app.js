@@ -1867,6 +1867,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   watch: {
+    //for searching data watch every char
     query: function query(newQ, old) {
       if (newQ === '') {
         this.getData();
@@ -1876,7 +1877,8 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
-    console.log('Component mounted.');
+    //console.log('Component mounted.')
+    //get all by life cycle huk
     this.getData();
   },
   methods: {
@@ -52821,17 +52823,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_snotify__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-snotify */ "./node_modules/vue-snotify/vue-snotify.esm.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+ //vform package
 
 
-window.Form = vform__WEBPACK_IMPORTED_MODULE_1__["Form"];
+window.Form = vform__WEBPACK_IMPORTED_MODULE_1__["Form"]; //start for progressbar
 
 
-var SnotifyOptions = {
-  toast: {
-    position: vue_snotify__WEBPACK_IMPORTED_MODULE_3__["SnotifyPosition"].rightTop
-  }
-};
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_snotify__WEBPACK_IMPORTED_MODULE_3__["default"], SnotifyOptions);
 var VueProgressBarOptions = {
   color: '#50d38a',
   failedColor: '#874b4b',
@@ -52845,9 +52842,20 @@ var VueProgressBarOptions = {
   location: 'top',
   inverse: false
 };
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_progressbar__WEBPACK_IMPORTED_MODULE_2___default.a, VueProgressBarOptions);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_progressbar__WEBPACK_IMPORTED_MODULE_2___default.a, VueProgressBarOptions); //end progressbar
+//start for Snotify package
+
+
+var SnotifyOptions = {
+  toast: {
+    position: vue_snotify__WEBPACK_IMPORTED_MODULE_3__["SnotifyPosition"].rightTop
+  }
+};
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_snotify__WEBPACK_IMPORTED_MODULE_3__["default"], SnotifyOptions); //end snotity
+
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('customers-component', __webpack_require__(/*! ./components/CustomersComponent.vue */ "./resources/js/components/CustomersComponent.vue")["default"]);
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('pagination', __webpack_require__(/*! ./components/partial/PaginationComponent */ "./resources/js/components/partial/PaginationComponent.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('pagination', __webpack_require__(/*! ./components/partial/PaginationComponent */ "./resources/js/components/partial/PaginationComponent.vue")["default"]); //vform package
+
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component(vform__WEBPACK_IMPORTED_MODULE_1__["HasError"].name, vform__WEBPACK_IMPORTED_MODULE_1__["HasError"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component(vform__WEBPACK_IMPORTED_MODULE_1__["AlertError"].name, vform__WEBPACK_IMPORTED_MODULE_1__["AlertError"]);
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({

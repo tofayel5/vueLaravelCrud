@@ -15,6 +15,7 @@ class CustomerResource extends JsonResource
     public function toArray($request)
     {
         return [
+            //prepare row data for show api
             'name' =>$this->name,
             'email' =>$this->email,
             'mobile' =>$this->phone,

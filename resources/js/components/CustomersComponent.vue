@@ -169,6 +169,7 @@
             }
         },
         watch: {
+            //for searching data watch every char
             query: function (newQ, old) {
                 if (newQ === '') {
                     this.getData()
@@ -178,7 +179,8 @@
             }
         },
         mounted() {
-            console.log('Component mounted.')
+            //console.log('Component mounted.')
+            //get all by life cycle huk
             this.getData();
         },
         methods: {
